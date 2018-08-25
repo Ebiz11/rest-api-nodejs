@@ -8,6 +8,13 @@ var get_data = function(callback:any){
     })
 }
 
+var delete_buah = function(id:number, callback:any) {
+    miyService.deletebuah(id, (res:ibuah[]) => {
+        callback(res);
+    })
+}
+
 export default {
-    get_data
+    get_data,
+    delete_buah
 }

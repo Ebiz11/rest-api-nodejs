@@ -10,4 +10,13 @@ router.get('/', (req: Request, res: Response) => {
     })
 });
 
+router.delete('/:id', (req: Request, res: Response) => {
+    let id = req.params.id;
+
+    miyController.delete_buah(id, (data:ibuah[]) => {
+        res.send(JSON.stringify(data))
+    })
+    
+});
+
 export const miyRoutes: Router = router;
